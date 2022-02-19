@@ -23,10 +23,8 @@ class HomeController extends Controller
         $autorus->setQuery($params['query']);
         $items = $autorus->getItems();
 
-        if (!isset($items['code'])) {
-            $saveJsonService->setData($items, 0);
-            $saveJsonService->save();
-        }
+        $saveJsonService->setData($items);
+        $saveJsonService->save();
 
         return $this->jsonResponse($items);
     }
