@@ -26,8 +26,7 @@ The program should work correctly for any input string.
 Example:
 Input string: "OC90"
 Result (displayed only 2 products for example, of course, you need to add all that are on the page):
-
-[code]
+```
 [
     {
         "name": "Oil filter KNECHT/MAHLE OC90",
@@ -50,4 +49,4 @@ Result (displayed only 2 products for example, of course, you need to add all th
         "id": "asdfvm30984jgafv",
     },
 ]
-[code]
+```
