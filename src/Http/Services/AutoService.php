@@ -120,44 +120,6 @@ class AutoService
             ];
         });
 
-//        if (empty($items)){
-//            $brandName = $tableBody->filter(
-//                'tr.resultTr2 > td.resultBrand.resultInline >
-//                        div.favorite-brand > a.open-abcp-modal-info'
-//            )->extract(['_text']);
-//
-//            $brandName = !empty($brandName) ?
-//                $brandName :
-//                $tableBody->filter(
-//                    'tr.resultTr2 > td.resultBrand.resultInline >
-//                            div > a.open-abcp-modal-info > '
-//                )->extract(['_text']);
-//
-//            $name = $tr->filter('td.resultDescription ')->extract(['_text']);
-//            $price = $tr->filter('td.resultPrice')->extract(['_text']);
-//            $article = $tr->filter('td.resultInline.resultPartCode')->extract(['_text']);
-//            $count = $tr->filter('td.resultAvailability')->extract(['_text']);
-//            $time = $tr->filter('td.resultDeadline')->extract(['_text']);
-//            $id = $tr
-//                ->filter('td.resultOrder.goodsQuantityBuyWrapper > input.addToBasketLinkFake')
-//                ->extract(['searchresultuniqueid']);
-//
-//            $image = $tr
-//                ->filter('td.fr-text-center.resultImage.resultInline > img.searchResultImg.abcp-image-preview')
-//                ->extract(['data-image-full']);
-//
-//            $items[] = [
-//                "name" => !empty($name) ? trim($name[0]) : $name,
-//                "price" => !empty($price) ? trim($price[0]) : $price,
-//                "article" => !empty($article) ? trim($article[0]) : $article,
-//                "brand" => !empty($brandName) ? trim($brandName[0]) : $brandName,
-//                "count" => !empty($count) ?  trim($count[0]) : $count,
-//                "time" => !empty($time) ? trim($time[0]) : $time,
-//                "img" => !empty($image) ? trim($image[0]) : $image,
-//                "id" => !empty($id) ? trim($id[0]) : $id,
-//            ];
-//        }
-
         if (empty($items)){
             return [
                 'code' => 404,
