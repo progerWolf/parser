@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Services\AutorusService;
+use App\Http\Services\AutoService;
 use App\Services\LocalSaveAsJsonService;
 use Laminas\Diactoros\ServerRequest;
 use Laminas\Diactoros\Response\JsonResponse;
@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index(ServerRequest $request): JsonResponse
     {
-        $autorus = new AutorusService();
+        $autorus = new AutoService();
         $saveJsonService = new LocalSaveAsJsonService();
 
         $params = $request->getQueryParams();

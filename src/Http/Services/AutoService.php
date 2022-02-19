@@ -6,10 +6,10 @@ use ErrorException;
 use Exception;
 use Symfony\Component\DomCrawler\Crawler;
 
-class AutorusService
+class AutoService
 {
     private string|null $query;
-    private string $url = "https://b2b.autorus.ru";
+    private string $url = "";
     private string $publicMethod = "search";
     private string $queryParam = "pcode";
     private Crawler $crawler;
