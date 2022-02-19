@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use JetBrains\PhpStorm\Pure;
+
 class LocalSaveAsJsonService
 {
     private array $data;
@@ -17,20 +19,18 @@ class LocalSaveAsJsonService
 
     public function save()
     {
-        if (file_exists($this->filePath())){
-            $fileData = file_get_contents($this->filePath());
-            $fileData = json_decode($fileData, true);
-            $fileData['data'][] = $this->data;
-            $data = json_encode($fileData);
-        } else {
-            $data = json_encode(['data' => $this->data]);
-        }
+        $data = json_encode(['data' => $this->data]);
         file_put_contents($this->filePath(), $data);
     }
 
-    private function filePath(): string
+    #[Pure] private function filePath(): string
     {
-        return __DIR__ . '/../../storage/' . 'items.json';
+        return __DIR__ . '/../../storage/' . $this->generateFileName();
+    }
+
+    private function generateFileName(): string
+    {
+        return 'items-' . date('Y-m-d H:i:s') . '.json';
     }
 
 }
