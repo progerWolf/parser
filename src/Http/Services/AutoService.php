@@ -63,8 +63,8 @@ class AutoService
 
         $this->crawler->addHtmlContent($result);
 
-        $catched = $this->crawler->filter('html > body > form#form4mcRecaptcha')->count();
-        if ($catched > 0) {
+        $caught = $this->crawler->filter('html > body > form#form4mcRecaptcha')->count();
+        if ($caught > 0) {
             return ['code' => 502, 'message' => 'Bad Gateway'];
         }
 
