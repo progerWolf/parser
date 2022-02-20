@@ -7,7 +7,6 @@ use MiladRahimi\PhpRouter\Router;
 use App\Http\Controllers\HomeController;
 
 $router = Router::create();
-$router->setupView(__DIR__ . '/src/View');
 
 $router->get('/', [HomeController::class, 'index']);
 

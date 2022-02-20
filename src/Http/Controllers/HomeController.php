@@ -9,6 +9,13 @@ use Laminas\Diactoros\Response\JsonResponse;
 
 class HomeController extends Controller
 {
+    /**
+     * Метод рализируюший парсинг данных из указанного сервиса
+     * @queryParam query Искомая строка. Example: query=17177
+     *
+     * @param ServerRequest $request
+     * @return JsonResponse
+     */
     public function index(ServerRequest $request): JsonResponse
     {
         $autorus = new AutoService();
